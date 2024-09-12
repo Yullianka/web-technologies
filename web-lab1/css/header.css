@@ -1,0 +1,115 @@
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+.header-container{
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 9px;
+}
+
+.logo-header{
+    color: #37447E;
+    font-family: "Roboto";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 38px; 
+    width: 79px;
+}
+
+.nav-list li {
+    display: inline-block;
+    font-family: "Roboto";
+    color: #505F98;
+    line-height: 65px;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 60px;
+    
+    
+
+}
+
+.header-buttons{
+    text-decoration: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 26px 0px 60px;  
+    gap: 60px;
+}
+
+
+
+.learn {
+    border-radius: 2px;
+    background: #111B47;
+    font-size: 16px;
+    padding-top: 4px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+    width: 104px;
+    height: 26px;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    line-height: 18px;
+    
+    
+}
+
+.buy{
+    border-radius: 2px;
+    background: #FFD166;
+    font-size: 16px;
+    padding-top: 4px;
+    border: none;
+    cursor: pointer;
+    color: #111B47;
+    margin-right: 10px;
+    width: 104px;
+    height: 26px;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    line-height: 18px;
+    
+   
+
+}
+
+.header-buttons{
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.learn:hover{
+    background-color: #505F98;
+    transition: 0.7s;
+}
+
+.buy:hover{
+    background-color: #c9d63f;
+    transition: 0.7s;
+    cursor: pointer;
+
+}

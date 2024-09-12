@@ -1,0 +1,14 @@
+.light-screen{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 165px;
+    padding-right: 180px;
+}
+
+
+.girl-photo {
+    width: 54%;
+    height: auto;
+    padding-top: 100px;
+    
+}
