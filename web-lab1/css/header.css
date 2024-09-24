@@ -1,0 +1,278 @@
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.open{
+    display: flex !important;
+}
+
+.header-container{
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 9px;
+    /* padding-left: 165px; */
+}
+
+.logo-header{
+    color: #37447E;
+    font-family: "Roboto";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 38px; 
+}
+
+
+.nav-list li:last-of-type{
+    padding-right: 0;
+}
+
+.nav-list-link {
+    position: relative;
+    transition: all .25s ease;
+}
+
+
+
+.nav-list li {
+    display: inline-block;
+    font-family: "Roboto";
+    color: #505F98;
+    line-height: 65px;
+    font-size: 17px;
+    font-weight: 400;
+    padding-left: 60px;
+}
+
+.header-buttons{
+    text-decoration: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 26px 0px 60px;  
+    gap: 60px;
+}
+
+
+
+.learn {
+    border-radius: 2px;
+    background: #111B47;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    color: white;
+    max-width: 104px;
+    height: 26px;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    line-height: 18px;
+    
+    
+}
+
+.buy{
+    border-radius: 2px;
+    background: #FFD166;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-left: 28px;
+    padding-right: 28px;
+    border: none;
+    cursor: pointer;
+    color: #111B47;
+    max-width: 104px;
+    height: 26px;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    line-height: 18px;
+    
+   
+
+}
+
+.header-buttons{
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span {
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #37447E;
+}
+
+
+
+
+.burger::after, .burger::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #37447E;
+    transition: all 0.3s ease-in 0s;
+}
+
+.burger::before { top: 0}
+
+.burger::after { bottom: 0}
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+.burger.active span { transform: scale(0)};
+
+
+@media screen and (min-width: 1920px) {
+    .header-container{
+        margin: 0;
+        max-width: 2500px;
+    }
+    .logo-header{
+        font-size: 40px;
+    }
+
+    .nav-list li {
+        font-size: 24px;
+        line-height: 44;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .burger {
+        display: flex;
+    }
+    
+    .open .nav-bar {
+        display: flex;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    .nav-list li {
+        font-size: 15px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow: auto;
+        padding: 50px 40px;
+        background-color:  #6F7CB2;;
+
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        padding: 0;
+    }
+
+    .nav-list li {
+        font-size: 32px;
+        padding: 0;
+    }
+
+    .header-buttons{
+        flex-direction: column;
+        padding: 0;
+        gap: 60px;
+       
+    }
+
+    .buy{
+        max-width: 250px;
+        text-align: center;
+        height: 30px;
+        font-size: 16px;
+        padding-left: 32px;
+        padding-right: 32px;
+        
+    }
+
+    .learn{
+        max-width: 250px;
+        text-align: center;
+        height: 30px;
+        font-size: 16px;
+    }
+
+}
+
+
+@media screen and (max-width: 780px) {
+    .header-container {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 20px;
+        background-color: white;
+        z-index: 10;
+    }
+
+    
+    
+}
+
+

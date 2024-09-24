@@ -1,0 +1,15 @@
+@import "global.css";
+
+@import "header.css";
+
+@import "./introduce-screen.css";
+@import "./light-screen.css";
+@import "./price-screen.css";
+
+@import "footer.css";
+
+@import "./animation.css"
+
+
+
+

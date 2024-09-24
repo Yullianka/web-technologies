@@ -1,0 +1,87 @@
+.light-screen{
+    padding-left: 165px;
+    /* padding-right: 180px; */
+}
+
+.light-position{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.half-section2{
+    padding-top: 160px;
+}
+
+.girl-photo {
+    width: 54%;
+    height: auto;
+    padding-right: 140px;
+    padding-top: 130px;
+    animation: floating 5s linear infinite;
+    
+}
+
+@media screen and (max-width: 1200px){
+    .light-screen{
+        padding-left: 100px;
+    }
+
+    .girl-photo{
+        padding-right: 0px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 992px){
+    .light-screen{
+        padding-left: 70px;
+    }
+    
+    .girl-photo{
+        padding-right: 0px;
+        width: 55%;
+        scale: 0.9;
+    }    
+}
+
+
+@media screen and (max-width: 768px) {
+    .light-screen{
+        padding-left: 60px;
+    }
+
+    .light-position{
+        display: block;
+    }
+    .half-section2{
+        padding-top: 70px;
+    }
+
+    .light-screen{
+        padding-left: 70px;
+    }
+
+    .girl-photo{
+        padding-top: 0;
+        width: 80%;
+    }
+
+
+    
+}
+
+@media screen and (max-width:480px){
+    .light-screen{
+
+        padding-left: 40px;
+    }
+    
+    .girl-photo{
+        width: 110%;
+        padding: 0%;
+        padding-right: 60px;
+ 
+     }
+}

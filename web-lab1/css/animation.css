@@ -1,0 +1,47 @@
+.learn:hover, .price-buttons:hover, .buy:hover {
+    background-color: white;
+    color: #111B47;
+    transition: 0.7s;
+    border: 2px solid #091133;
+}
+
+.iot-button:hover{
+    background-color:  #E7ECFF;
+    color: #111B47;
+    transition: 0.7s;
+    border: 2px solid #091133;
+
+}
+
+
+.nav-list-link::after {
+    background:  #505F98;
+    content: "";
+    bottom: -8px;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0); 
+    transition: all .25s ease;
+    width: 100%;
+
+}
+
+
+.nav-list-link:hover::after {
+    transform: scaleX(1); 
+}
+
+
+@keyframes floating{
+    0%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
