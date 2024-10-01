@@ -1,0 +1,73 @@
+.main-title{
+    font-size: 38px;
+    color: rgb(107, 107, 210);
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.main_books{
+    display: flex;
+    justify-content: space-around;
+}
+
+.title-books{
+    color: rgb(242, 62, 116);
+    font-size: 33px;
+}
+
+.total-price{
+    padding-top: 40px;
+}
+
+.list-of-books{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-buttons{
+    padding: 10px 20px;
+    background-color: #45a0e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    line-height: 18px;
+}
+
+.book-buttons:hover{
+    background-color: #17748e;
+}
+
+.input-book{
+    width: 300px;
+    padding: 10px; 
+    border-radius: 20px; 
+    border: 2px solid #ccc; 
+    font-size: 16px; 
+    transition: border-color 0.3s ease;
+}
+
+.input-book:focus{
+    border-color: #66a3ff; 
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 163, 255, 0.6);
+}
