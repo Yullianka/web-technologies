@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <h1 class="main-title"> All available Books</h1>
+    <div class="main_books">
+        <div>
+            <h1 class="title-books">Books Navigation</h1>
+            <button id="sortPrice" class="book-buttons">Sort by Price</button>
+            <button id="sortPages" class="book-buttons">Sort by Pages</button> 
+        </div>
+        
+        <div>
+            <h2 class="title-books">Search</h2>
+            <input class="input-book" type="text" id="searchInput" placeholder="Search by title or author">
+            <button id="searchButton" class="book-buttons">Search</button>
+            <button id="resetButton" class="book-buttons">Reset</button>
+        </div>
+        
+    </div>
+
+    <h2 class="title-books">Books:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="booksList"></tbody>
+    </table>
+
+    <div class="total-price">
+        <button class="book-buttons" id="calculateButton">Calculate Total</button>
+        <h2 class="title-books">Total Price: <span id="totalPrice">0</span> грн</h2>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
