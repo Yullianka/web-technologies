@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CardItem.css';
 
 const CardItem = (props) => {
-  const { title, description, price, imageSrc } = props;
+  const { title, description, price, imageSrc, iphoneID } = props;
+  const navigate = useNavigate();
+
+  const handleMoreDetails = () => {
+    navigate(`/catalog/${iphoneID}`);
+  };
 
   return (
     <div className="card">
@@ -10,7 +16,7 @@ const CardItem = (props) => {
       <h3 className="card-title">{title}</h3>
       <p className="card-description">{description}</p>
       <p className="card-price">${price}</p>
-      <button className="buy-button">Buy Now</button>
+      <button className="buy-button" onClick={handleMoreDetails}>More details</button>
     </div>
   );
 };
