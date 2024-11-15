@@ -1,0 +1,29 @@
+.sort-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    margin-right: 60px;
+  }
+  
+  .sort-section select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #8b0000;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .sort-section select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .sort-section select option {
+    padding: 10px;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,41 @@
+
+  .catalog-filters input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #900000; 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+  }
+  
+  .catalog-filters input:focus {
+    outline: none;
+    border: 1px solid #007BFF;
+  }
+  
+
+  .sort-section {
+    display: flex;
+    gap: 20px; 
+  }
+  
+  .catalog-filters select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+  }
+  
+  .catalog-filters select:focus {
+    outline: none;
+    border: 1px solid #007BFF;
+  }
+  
+
+  
