@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CardItem from '../../../components/CardItem';
 import CatalogFilter from '../../../components/Filter/CatalogFilter';
+import Loader from '../../../components/Loader/Loader';
+import { fetchItems } from '../../../service/api';
+// import './Catalog.css'
 
-const Catalog = ({ cardItems }) => {
+const Catalog = () => {
+  const [cardItems, setCardItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedModel, setSelectedModel] = useState('all');
   const [sortOrder, setSortOrder] = useState('low-to-high');
+  const [loading, setLoading] = useState(false);
 
-  const filteredItems = cardItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesModel = selectedModel === 'all' || item.title.toLowerCase().includes(selectedModel);
-    return matchesSearch && matchesModel;
-  });
+  useEffect(() => {
+    const loadItems = async () => {
+      setLoading(true);
+      try {
+        const response = await fetchItems(searchQuery, selectedModel, sortOrder);
+        setTimeout(() => {
+          setCardItems(response.data);
+          setLoading(false);
+        }, 1000);
+        
+      } catch (error) {
+        console.error('Error fetching items:', error);
+        setLoading(false);
+      }
+    };
 
-  const sortedItems = filteredItems.sort((a, b) => {
-    return sortOrder === 'low-to-high' ? a.price - b.price : b.price - a.price;
-  });
+    loadItems();
+  }, [searchQuery, selectedModel, sortOrder]);
 
   return (
     <div className="container">
@@ -24,18 +38,22 @@ const Catalog = ({ cardItems }) => {
         setSelectedModel={setSelectedModel} 
         setSortOrder={setSortOrder} 
       />
-      <div className="cards-container">
-        {sortedItems.map(item => (
-          <CardItem
-            key={item.id}
-            title={item.title}
-            description={item.description}
-            price={item.price}
-            imageSrc={item.imageSrc}
-            iphoneID={item.id}
-          />
-        ))}
-      </div>
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="cards-container">
+          {cardItems.map(item => (
+            <CardItem
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              price={item.price}
+              imageSrc={item.imageSrc}
+              iphoneID={item.id}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
